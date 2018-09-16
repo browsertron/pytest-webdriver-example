@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+aiohttp = "*"
+pytest = "*"
+selenium = "*"
+pylint = "*"
+pytest-parallel = "*"
+invoke = "*"
+requests = "*"
+chromedriver-binary = "*"
+pytest-selenium = "*"
+pytest-variables = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.6"
+
+[scripts]
+generate = "python tests/generate.py 20"
+app = "python src/server.py"
+test = "invoke test"
