@@ -25,5 +25,11 @@ for num in range(desired):
     with open(test_path, 'w') as f:
         f.write(test_contents)
 
-shutil.copy2(path.join(input_path, 'webdriver_monkey_patch.py'), output_path)
-shutil.copy2(path.join(input_path, 'conftest.py'), output_path)
+shutil.copy2(
+    path.join(input_path, 'webdriver_monkey_patch.template.py'),
+    path.join(output_path, 'webdriver_monkey_patch.py')
+)
+shutil.copy2(
+    path.join(input_path, 'conftest.template.py'),
+    path.join(output_path, 'conftest.py')
+)
